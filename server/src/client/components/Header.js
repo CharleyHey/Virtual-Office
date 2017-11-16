@@ -8,18 +8,20 @@ const Header = ({ auth }) => {
   const authButton = auth ? (
     <a href="/api/logout">Logout</a>
   ) : (
-    <a href="/api/auth/google">Login</a>
-  );
+      <a href="/api/auth/google">Login</a>
+    );
 
   return (
-    <div>
-      <Link to="/">Virtual Office</Link>
-      <div>
-        <Link to="/users">Users</Link>
-        <Link to="/admins">Admins</Link>
-        {authButton}
+    <nav>
+      <div className="nav-wrapper blue lighten-2">
+        <Link to="/" className="brand-logo center">Virtual Office</Link>
+        <ul className="right">
+          <li><Link to="/users">Users</Link></li>
+          <li><Link to="/admins">Admins</Link></li>
+          <li>{authButton}</li>
+        </ul>
       </div>
-    </div>
+    </nav>
   )
 }
 
