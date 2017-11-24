@@ -94,6 +94,11 @@ li:last-child {
   line-height: 3rem;
 }
 
+.collection .collection-item:hover {
+  line-height: 3rem;
+  cursor: pointer;
+}
+
 .btn {
   margin-right: 15px;
 }
