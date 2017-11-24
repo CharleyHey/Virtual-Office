@@ -1,5 +1,8 @@
 // Startup point for the client side application
 import 'babel-polyfill';
+import 'materialize-css/dist/css/materialize.min.css';
+import './styles.css';
+import 'materialize-css/dist/js/materialize.min.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';

@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import UsersListPage from './pages/UsersListPage';
 import NotFoundPage from './pages/NotFoundPage';
 import AdminsPage from './pages/AdminsPage';
+import EmailToolPage from './pages/EmailToolPage';
 
 
 export default [
@@ -22,6 +23,10 @@ export default [
       {
         ...AdminsPage,
         path: '/admins'
+      },
+      {
+        ...EmailToolPage,
+        path: '/email'
       },
       {
         ...NotFoundPage

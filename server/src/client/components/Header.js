@@ -13,10 +13,11 @@ const Header = ({ auth }) => {
 
   return (
     <nav>
-      <div className="nav-wrapper blue lighten-2">
+      <div className="nav-wrapper green lighten-2">
         <Link to="/" className="brand-logo center">Virtual Office</Link>
         <ul className="right">
           <li><Link to="/users">Users</Link></li>
+          <li><Link to="/email">eMail</Link></li>
           <li><Link to="/admins">Admins</Link></li>
           <li>{authButton}</li>
         </ul>

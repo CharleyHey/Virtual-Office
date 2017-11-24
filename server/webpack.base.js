@@ -13,7 +13,12 @@ module.exports = {
               ['env', { targets: { browsers: ['last 2 versions'] } }]
             ]
           }
-        }
+        },
+        {
+          use: ['style-loader', 'css-loader'],
+          test: /\.css$/
+        },
+        { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }       
       ]
     }
 };

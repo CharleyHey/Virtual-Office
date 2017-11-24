@@ -1,3 +1,5 @@
+import mails from '../../dummyData/mails';
+
 export const FETCH_USERS = 'fetch_users';
 export const fetchUsers = () => async (dispatch, getState, api) => {
   const res = await api.get('/users');
@@ -23,4 +25,20 @@ export const fetchAdmins = () => async (dispatch, getState, api) => {
     type: FETCH_ADMINS,
     payload: res
   });
+}
+
+export const FETCH_MAILS = 'fetch_mails';
+export const fetchMails = (mail) =>  {
+  return {
+    type: FETCH_MAILS,
+    payload: mail
+  }
+}
+
+export const FETCH_ACTIVE_MAIL = 'fetch_active_mail';
+export const fetchActiveMail = (mail) => {
+  return {
+    type: FETCH_ACTIVE_MAIL,
+    payload: mail
+  }
 }
