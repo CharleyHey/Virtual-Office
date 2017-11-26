@@ -26,8 +26,9 @@ class Content extends Component {
   }
 }
 
-const mapStateToProps = ({activeMail}) => ({
-  activeMail
+const mapStateToProps = ({activeMail, auth}) => ({
+  activeMail,
+  auth
 })
 
 export default connect(mapStateToProps)(Content);

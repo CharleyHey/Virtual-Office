@@ -8,7 +8,7 @@ const Header = ({ auth }) => {
   const authButton = auth ? (
     <a href="/api/logout">Logout</a>
   ) : (
-      <a href="/api/auth/google">Login</a>
+      <a href="/auth/google">Login</a>
     );
 
   return (

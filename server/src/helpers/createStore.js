@@ -5,10 +5,10 @@ import reducers from '../client/reducers';
 
 export default req => {
   const axiosInstance = axios.create({
-    baseURL: 'http://react-ssr-api.herokuapp.com',
+    baseURL: 'localhost:3000',
     headers: { cookie: req.get('cookie') || ''}
   })
 
-  const store = createStore(reducers, {}, applyMiddleware(thunk.withExtraArgument(axiosInstance)));
+  const store = createStore(reducers, {auth: req.user}, applyMiddleware(thunk.withExtraArgument(axiosInstance)));
   return store;
 }
